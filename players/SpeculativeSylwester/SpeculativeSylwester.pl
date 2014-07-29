@@ -19,7 +19,7 @@ me_do($SHARPEN, "beginning") if $first_move;
 me_do($POKE, "end is near") if  almost_over() || sword($me);
 me_do($SHARPEN, "you sword") if !sword($me) && sword($you);
 me_do($POKE, "you repeat") if consecutive_sharpens($you) && sharp($me);
-me_do(blunt_move(), "you blunt stick") if not sharp($you); 
+me_do(blunt_move(), "you blunt stick") if not sharp($you);
 me_do(aggressive_move(), "me think you sharpen") if sharpen_next($you) && !sharpen_next($me);
 me_do($SHARPEN, "me think you block") if you_block_next() && very_little_chance_me_sharpen_next();
 me_do($BLOCK, "me have no idea you do");
@@ -65,7 +65,7 @@ sub you_block_next {
 }
 
 sub very_little_chance_me_sharpen_next {
-  $me !~ /S$/ && ( $me !~ /([^S]+)S\1$/ || $me =~ /^SB+SB+$/ ); 
+  $me !~ /S$/ && ( $me !~ /([^S]+)S\1$/ || $me =~ /^SB+SB+$/ );
 }
 
 sub blunt_move {
