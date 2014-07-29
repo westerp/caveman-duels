@@ -49,6 +49,7 @@ sub num_pokes {
   length($me);
 }
 
+
 sub consecutive_sharpens {
   my $you = shift;
   $you =~ m/SS+$/
@@ -56,7 +57,7 @@ sub consecutive_sharpens {
 
 sub sharpen_next {
   my $you = shift;
-  $you =~ /([^S]+)S\1$/;
+  $you =~ /([^S]+)S\1S\1$/;
 }
 
 sub you_block_next {
